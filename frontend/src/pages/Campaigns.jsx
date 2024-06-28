@@ -68,7 +68,7 @@ export default function Campaigns() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/donations", {
+        const { data } = await axios.get("https://seedstake.onrender.com/donations", {
           withCredentials: true,
         });
 
@@ -89,7 +89,7 @@ export default function Campaigns() {
 
   const handleDeleteCampaign = async (campaignId) => {
     try {
-      await axios.delete(`http://localhost:3000/campaigns/${campaignId}`, {
+      await axios.delete(`https://seedstake.onrender.com/campaigns/${campaignId}`, {
         withCredentials: true,
       });
 

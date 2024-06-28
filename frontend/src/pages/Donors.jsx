@@ -60,7 +60,7 @@ export default function Donors() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/donations", {
+        const { data } = await axios.get("https://seedstake.onrender.com/donations", {
           withCredentials: true,
         });
 

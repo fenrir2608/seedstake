@@ -109,7 +109,7 @@ export default function NewCampaign() {
     }
 
     try {
-      const { data } = await axios.post("http://localhost:3000/new", formData, {
+      const { data } = await axios.post("https://seedstake.onrender.com/new", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -131,7 +131,7 @@ export default function NewCampaign() {
     const verifyCookie = async () => {
       try {
         const { data: verification } = await axios.get(
-          "http://localhost:3000/verify",
+          "https://seedstake.onrender.com/verify",
           {
             withCredentials: true,
           }
@@ -142,7 +142,7 @@ export default function NewCampaign() {
           return;
         }
 
-        const { data } = await axios.get("http://localhost:3000/", {
+        const { data } = await axios.get("https://seedstake.onrender.com/", {
           withCredentials: true,
         });
 

@@ -60,7 +60,7 @@ const Donate = () => {
     const getCampaign = async () => {
       try {
         const { data: verification } = await axios.get(
-          "http://localhost:3000/verify",
+          "https://seedstake.onrender.com/verify",
           {
             withCredentials: true,
           }
@@ -71,7 +71,7 @@ const Donate = () => {
           return;
         }
 
-        const { data } = await axios.get(`http://localhost:3000/search/${id}`, {
+        const { data } = await axios.get(`https://seedstake.onrender.com/search/${id}`, {
           withCredentials: true,
         });
 
@@ -95,7 +95,7 @@ const Donate = () => {
     const verifyCookie = async () => {
       try {
         const { data: verification } = await axios.get(
-          "http://localhost:3000/verify",
+          "https://seedstake.onrender.com/verify",
           {
             withCredentials: true,
           }
@@ -106,7 +106,7 @@ const Donate = () => {
           return;
         }
 
-        const { data } = await axios.get("http://localhost:3000/", {
+        const { data } = await axios.get("https://seedstake.onrender.com/", {
           withCredentials: true,
         });
 
@@ -180,7 +180,7 @@ const Donate = () => {
       const amount = parseFloat(donationAmount);
 
       const { data } = await axios.post(
-        `http://localhost:3000/campaigns/${campaignId}/donate`,
+        `https://seedstake.onrender.com/campaigns/${campaignId}/donate`,
         {
           amount: amount,
           isAnonymous: isAnonymous,
