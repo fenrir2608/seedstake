@@ -154,7 +154,7 @@ const Home = () => {
               >
                 <Avatar className="h-8 w-8">
                   <AvatarImage src="/placeholder-user.jpg" />
-                  <AvatarFallback>{username.charAt(0)}</AvatarFallback>
+                  <AvatarFallback>{username.charAt(1)}</AvatarFallback>
                 </Avatar>
                 <span className="sr-only">Toggle user menu</span>
               </Button>
